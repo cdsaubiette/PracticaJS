@@ -1,0 +1,40 @@
+.button {
+   position: relative;
+   display: inline-block;
+   text-decoration: none;
+   color: #fff;
+   padding: 0.15rem;
+   border-radius: 0.25rem;
+   overflow: hidden;
+   isolation: isolate;    
+
+}
+
+.button::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 15.625rem;
+    height: 15.625rem;
+    background: linear-gradient(transparent 50%, #ffffff, transparent);
+    animation: rotat 2.5s linear infinite;
+}
+
+.button span{
+    display: inherit;
+    background-color: crimson;
+    padding: 1rem 2rem;
+    border-radius: calc(0.25rem - 0.15rem);
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg
+    }
+    to {
+        rotate: 360deg;
+    }
+}
