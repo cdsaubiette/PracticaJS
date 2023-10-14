@@ -5,4 +5,4 @@ var apellido;
 
 
 
-alert("Hola Mundo con JavaScrip" + nombre);
+alert("Hola Mundo con JavaScript " + nombre);
